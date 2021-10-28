@@ -19,6 +19,14 @@ function myschool_theme_support() {
 	 * provide it for us.
 	 */
 	add_theme_support( 'title-tag' );
+	//register nav menus
+	register_nav_menus(
+		array(
+			'primary' => __( 'Primary', 'myschool' ),
+			'footer'  => __( 'footer', 'myschool' ),
+		)
+	);
+
 }
 add_action( 'after_setup_theme', 'myschool_theme_support' );
 
