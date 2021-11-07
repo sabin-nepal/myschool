@@ -12,6 +12,16 @@ function myschool_theme_support() {
 	// Set post thumbnail size.
 	set_post_thumbnail_size( 1200, 9999 );
 
+	//Enable support for logo in customizer
+	add_theme_support(
+		'custom-logo',
+		array(
+			'height'      => 120,
+			'width'       => 120,
+			'flex-height' => true,
+			'flex-width'  => true,
+		)
+	);
 	/*
 	 * Let WordPress manage the document title.
 	 * By adding theme support, we declare that this theme does not use a
@@ -29,6 +39,10 @@ function myschool_theme_support() {
 
 }
 add_action( 'after_setup_theme', 'myschool_theme_support' );
+
+//required files
+
+require get_template_directory() . '/includes/classes/class-myschool-customize.php';
 
 /**
  * Register and Enqueue Styles.
