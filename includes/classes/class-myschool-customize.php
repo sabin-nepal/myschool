@@ -38,6 +38,63 @@ if ( ! class_exists( 'MySchool_Customize' ) ) {
 
 				)
 			);
+			//mail
+			$wp_customize->add_setting(
+				'mail',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => '',
+					'sanitize_callback' => 'wp_filter_nohtml_kses',
+
+				)
+			);
+			$wp_customize->add_control(
+				'top_banner_title',
+				array(
+					'type'    => 'text',
+					'label'   => __( 'Mail', 'myschool' ),
+					'section' => 'options',
+
+				)
+			);
+			//define phone number
+			$wp_customize->add_setting(
+				'phone_number',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => '',
+					'sanitize_callback' => 'wp_filter_nohtml_kses',
+
+				)
+			);
+			$wp_customize->add_control(
+				'phone_number',
+				array(
+					'type'    => 'text',
+					'label'   => __( 'Phone Number', 'myschool' ),
+					'section' => 'options',
+
+				)
+			);
+			//opening time
+			$wp_customize->add_setting(
+				'opening_time',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => '',
+					'sanitize_callback' => 'wp_filter_nohtml_kses',
+
+				)
+			);
+			$wp_customize->add_control(
+				'opening_time',
+				array(
+					'type'    => 'text',
+					'label'   => __( 'Opening Time', 'myschool' ),
+					'section' => 'options',
+
+				)
+			);
 			//enable or disnable sidebar in blog
 			$wp_customize->add_setting(
 				'enable_sidebar_blog',
@@ -124,6 +181,8 @@ if ( ! class_exists( 'MySchool_Customize' ) ) {
 
 				)
 			);
+
+			//twitter
 			$wp_customize->add_setting(
 				'twitter',
 				array(
