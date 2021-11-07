@@ -19,6 +19,25 @@ if ( ! class_exists( 'MySchool_Customize' ) ) {
 					'description' => __( 'Allows you to change diffrent setting related to Myschool', 'myschool' ),
 				)
 			);
+			//define text for top banner
+			$wp_customize->add_setting(
+				'top_banner_title',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => '',
+					'sanitize_callback' => 'wp_filter_nohtml_kses',
+
+				)
+			);
+			$wp_customize->add_control(
+				'top_banner_title',
+				array(
+					'type'    => 'text',
+					'label'   => __( 'Top Banner Title', 'myschool' ),
+					'section' => 'options',
+
+				)
+			);
 			//enable or disnable sidebar in blog
 			$wp_customize->add_setting(
 				'enable_sidebar_blog',
@@ -32,14 +51,15 @@ if ( ! class_exists( 'MySchool_Customize' ) ) {
 			$wp_customize->add_control(
 				'enable_sidebar_blog',
 				array(
-					'type'    => 'checkbox',
-					'label'   => __( 'Sidebar', 'myschool' ),
-					'section' => 'options',
+					'type'        => 'checkbox',
+					'label'       => __( 'Sidebar', 'myschool' ),
+					'section'     => 'options',
+					'description' => __( 'Enable or disable Sidebar in blog and single post', 'myschool' ),
 
 				)
 			);
 			/**
-			 *Theme Customizer
+			 *Colors
 			*/
 			$wp_customize->add_section(
 				'colors',
@@ -70,6 +90,62 @@ if ( ! class_exists( 'MySchool_Customize' ) ) {
 					)
 				)
 			);
+			/**
+			 *Social Links
+			*/
+			$wp_customize->add_section(
+				'social',
+				array(
+					'title'       => __( 'Social Links', 'myschool' ),
+					'priority'    => 38,
+					'capability'  => 'edit_theme_options',
+					'description' => __( 'Allows you to change Social Links of My School', 'myschool' ),
+				)
+			);
+			//define social links
+			$wp_customize->add_setting(
+				'facebook',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => '',
+					'sanitize_callback' => array( __CLASS__, 'sanitize_url' ),
+
+				)
+			);
+			$wp_customize->add_control(
+				'facebook',
+				array(
+					'type'        => 'url',
+					'label'       => __( 'Facebook', 'myschool' ),
+					'section'     => 'social',
+					'input_attrs' => array(
+						'placeholder' => __( 'http://www.facebook.com' ),
+					),
+
+				)
+			);
+			$wp_customize->add_setting(
+				'twitter',
+				array(
+					'capability'        => 'edit_theme_options',
+					'default'           => '',
+					'sanitize_callback' => array( __CLASS__, 'sanitize_url' ),
+
+				)
+			);
+			$wp_customize->add_control(
+				'twitter',
+				array(
+					'type'        => 'url',
+					'label'       => __( 'Twitter', 'myschool' ),
+					'section'     => 'social',
+					'input_attrs' => array(
+						'placeholder' => __( 'http://www.twitter.com' ),
+					),
+
+				)
+			);
+
 		}
 		/**
 		 * Sanitize boolean for checkbox.
@@ -79,6 +155,12 @@ if ( ! class_exists( 'MySchool_Customize' ) ) {
 		 */
 		public static function sanitize_checkbox( $checked ) {
 			return ( ( isset( $checked ) && true === $checked ) ? true : false );
+		}
+		/**
+		 * Sanitize field for url.
+		 */
+		public static function sanitize_url( $url ) {
+			return esc_url_raw( $url );
 		}
 	}
 	add_action( 'customize_register', array( 'MySchool_Customize', 'register' ) );
