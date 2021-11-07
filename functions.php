@@ -47,7 +47,7 @@ require get_template_directory() . '/includes/classes/class-myschool-customize.p
 /**
  * Register and Enqueue Styles.
  *
- * @since My Style 1.0
+ * @since My School 1.0
  */
 function myschool_register_styles() {
 
@@ -66,7 +66,7 @@ add_action( 'wp_enqueue_scripts', 'myschool_register_styles' );
 /**
  * Register and Enqueue Scripts.
  *
- * @since My Style 1.0
+ * @since My School 1.0
  */
 function myschool_register_scripts() {
 
@@ -79,3 +79,39 @@ function myschool_register_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'myschool_register_scripts' );
+
+/**
+ * Register sidebar.
+ *
+ * @since My School 1.0
+ */
+function myschool_sidebar_registration() {
+
+	//Footer1
+	register_sidebar(
+		array(
+			'name'          => __( 'Footer 1', 'myschool' ),
+			'id'            => 'sidebar-1',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+			'before_widget' => '<div class="col-md-6">',
+			'after_widget'  => '</div>',
+		)
+	);
+
+	//blog sidebar
+	register_sidebar(
+		array(
+			'name'          => __( 'Blog', 'myschool' ),
+			'id'            => 'sidebar-2',
+			'before_title'  => '<h3 class="widget-title">',
+			'after_title'   => '</h3>',
+			'before_widget' => '',
+			'after_widget'  => '',
+		)
+	);
+
+}
+add_action( 'widgets_init', 'myschool_sidebar_registration' );
+
+
