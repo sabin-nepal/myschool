@@ -118,35 +118,35 @@ if ( ! class_exists( 'MySchool_Customize' ) ) {
 			/**
 			 *Colors
 			*/
-			$wp_customize->add_section(
-				'colors',
-				array(
-					'title'       => __( 'Colors', 'myschool' ),
-					'priority'    => 36,
-					'capability'  => 'edit_theme_options',
-					'description' => __( 'Allows you to change Colors related to Myschool', 'myschool' ),
-				)
-			);
-			//Customizer settings and control to edit the colors of this theme
-			$wp_customize->add_setting(
-				'header_footer_color',
-				array(
-					'capability'        => 'edit_theme_options',
-					'default'           => '#35373e',
-					'sanitize_callback' => 'sanitize_hex_color',
+			// $wp_customize->add_section(
+			// 	'colors',
+			// 	array(
+			// 		'title'       => __( 'Colors', 'myschool' ),
+			// 		'priority'    => 36,
+			// 		'capability'  => 'edit_theme_options',
+			// 		'description' => __( 'Allows you to change Colors related to Myschool', 'myschool' ),
+			// 	)
+			// );
+			// //Customizer settings and control to edit the colors of this theme
+			// $wp_customize->add_setting(
+			// 	'header_footer_color',
+			// 	array(
+			// 		'capability'        => 'edit_theme_options',
+			// 		'default'           => '#35373e',
+			// 		'sanitize_callback' => 'sanitize_hex_color',
 
-				)
-			);
-			$wp_customize->add_control(
-				new Wp_Customize_Color_Control(
-					$wp_customize,
-					'header_footer_color',
-					array(
-						'label'   => __( 'Header & Footer Color', 'myschool' ),
-						'section' => 'colors',
-					)
-				)
-			);
+			// 	)
+			// );
+			// $wp_customize->add_control(
+			// 	new Wp_Customize_Color_Control(
+			// 		$wp_customize,
+			// 		'header_footer_color',
+			// 		array(
+			// 			'label'   => __( 'Header & Footer Color', 'myschool' ),
+			// 			'section' => 'colors',
+			// 		)
+			// 	)
+			// );
 			/**
 			 *Social Links
 			*/

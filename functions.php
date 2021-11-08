@@ -44,6 +44,9 @@ add_action( 'after_setup_theme', 'myschool_theme_support' );
 
 require get_template_directory() . '/includes/classes/class-myschool-customize.php';
 
+// Function for all template tags of this theme
+require get_template_directory() . '/includes/template-tags.php';
+
 /**
  * Register and Enqueue Styles.
  *

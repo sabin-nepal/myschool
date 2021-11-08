@@ -21,6 +21,15 @@ get_header(); ?>
 		</div>
 	</div>
 <?php endif; ?>
-
+<?php
+if ( have_posts() ) :
+	myschool_before_loop();
+	while ( have_posts() ) :
+		the_post();
+		get_template_part( 'template-parts/content' );
+	endwhile;
+	myschool_after_loop();
+endif;
+?>
 <?php
 get_footer();
