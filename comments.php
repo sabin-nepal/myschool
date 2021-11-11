@@ -10,9 +10,9 @@ $commentvalue = false;
 if ( have_comments() ) : ?>
 
 	<?php
-		$nocomment    = __( 'No Comments Yet', 'my-style' );
-		$onecomment   = __( '1 Comment', 'my-style' );
-		$morecomments = __( '% Comments', 'my-style' );
+		$nocomment    = __( 'No Comments Yet', 'myschool' );
+		$onecomment   = __( '1 Comment', 'myschool' );
+		$morecomments = __( '% Comments', 'myschool' );
 	?>
 
 	<h3><?php comments_number( $nocomment, $onecomment, $morecomments ); ?></h3>	
@@ -32,7 +32,7 @@ if ( have_comments() ) : ?>
 		<!-- If comments are open, but there are no comments. -->
 	<?php else : // comments are closed ?>
 		<!-- If comments are closed. -->
-		<h3><?php _e( 'Comments are closed', 'my-style' ); ?></h3>
+		<h3><?php _e( 'Comments are closed', 'myschool' ); ?></h3>
 	<?php endif; ?>
 
 <?php endif; ?>
@@ -44,7 +44,7 @@ if ( have_comments() ) : ?>
 
 		<!-- Comment Section -->	
 		<div id="respond" class="comment_section">			
-			<h3><?php comment_form_title( __( 'Leave a Comment', 'my-style' ), __( 'Leave a Comment', 'my-style' ) ); ?></h3>	
+			<h3><?php comment_form_title( __( 'Leave a Comment', 'myschool' ), __( 'Leave a Comment', 'myschool' ) ); ?></h3>	
 			<p class="cancel-comment-reply"><?php cancel_comment_reply_link(); ?></p>
 
 			<?php if ( get_option( 'comment_registration' ) && ! is_user_logged_in() ) : ?>
@@ -54,29 +54,29 @@ if ( have_comments() ) : ?>
 					<form class="comment-form" id="commentform" method="post" action="<?php echo get_option( 'siteurl' ); ?>/wp-comments-post.php">
 						<div class="form-group">
 							<?php if ( is_user_logged_in() ) : ?>
-								<input type="hidden" class="form-control" placeholder="<?php _e( 'Name *', 'my-style' ); ?>" id="author" name="author" value="<?php echo get_the_author(); ?>">
+								<input type="hidden" class="form-control" placeholder="<?php _e( 'Name *', 'myschool' ); ?>" id="author" name="author" value="<?php echo get_the_author(); ?>">
 							<?php else : ?>
-								<input type="text" class="form-control" placeholder="<?php _e( 'Name *', 'my-style' ); ?>" id="author" name="author" value="">
+								<input type="text" class="form-control" placeholder="<?php _e( 'Name *', 'myschool' ); ?>" id="author" name="author" value="">
 							<?php endif; ?>
 						</div>						
 						<div class="form-group">
 							<?php if ( is_user_logged_in() ) : ?>
-								<input type="hidden" class="form-control" placeholder="<?php _e( 'Name *', 'my-style' ); ?>" id="email" name="email" value="<?php echo get_the_author_email(); ?>">
+								<input type="hidden" class="form-control" placeholder="<?php _e( 'Name *', 'myschool' ); ?>" id="email" name="email" value="<?php echo get_the_author_email(); ?>">
 							<?php else : ?>
-								<input type="email" class="form-control" placeholder="<?php _e( 'Name *', 'my-style' ); ?>" id="email" name="email" value="">
+								<input type="email" class="form-control" placeholder="<?php _e( 'Name *', 'myschool' ); ?>" id="email" name="email" value="">
 							<?php endif; ?>
 						</div>						
 
 						<div class="form-group">
-							<input type="text" class="form-control" placeholder="<?php _e( 'Subject', 'my-style' ); ?>" id="subject" name="subject" value="">
+							<input type="text" class="form-control" placeholder="<?php _e( 'Subject', 'myschool' ); ?>" id="subject" name="subject" value="">
 						</div>						
 
 						<div class="form-group">
-							<textarea class="form-control" placeholder="<?php _e( 'Message *', 'my-style' ); ?>" id="comment" name="comment" rows="8" ></textarea>
+							<textarea class="form-control" placeholder="<?php _e( 'Message *', 'myschool' ); ?>" id="comment" name="comment" rows="8" ></textarea>
 						</div>												
 
 						<div class="form-group">
-							<input type="submit" value="<?php _e( 'Add Comment', 'my-style' ); ?>" id="submit" name="submit" class="btn btn3">
+							<input type="submit" value="<?php _e( 'Add Comment', 'myschool' ); ?>" id="submit" name="submit" class="btn btn3">
 							<?php comment_id_fields(); ?>
 							<?php do_action( 'comment_form', $post->ID ); ?>	
 						</div>						
