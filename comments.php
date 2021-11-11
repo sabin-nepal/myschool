@@ -19,7 +19,15 @@ if ( have_comments() ) : ?>
 
 
 	<ol class="commentlist">
-		<?php wp_list_comments( 'type=comment&callback=mystyle_comment&avatar_size=70' ); ?>
+		<?php
+		wp_list_comments(
+			array(
+				'avatar_size' => 60,
+				'style'       => 'ol',
+				'short_ping'  => true,
+			)
+		);
+		?>
 	</ol>
 	<div class="comments-pagination">
 		<?php paginate_comments_links(); ?>
@@ -63,7 +71,7 @@ if ( have_comments() ) : ?>
 							<?php if ( is_user_logged_in() ) : ?>
 								<input type="hidden" class="form-control" placeholder="<?php _e( 'Name *', 'myschool' ); ?>" id="email" name="email" value="<?php echo get_the_author_email(); ?>">
 							<?php else : ?>
-								<input type="email" class="form-control" placeholder="<?php _e( 'Name *', 'myschool' ); ?>" id="email" name="email" value="">
+								<input type="email" class="form-control" placeholder="<?php _e( 'Email *', 'myschool' ); ?>" id="email" name="email" value="">
 							<?php endif; ?>
 						</div>						
 
