@@ -47,6 +47,9 @@ require get_template_directory() . '/includes/classes/class-myschool-customize.p
 // Function for all template tags of this theme
 require get_template_directory() . '/includes/template-tags.php';
 
+//generate customizer css
+require get_template_directory() . '/includes/colors-pattern.php';
+
 /**
  * Register and Enqueue Styles.
  *
@@ -59,8 +62,9 @@ function myschool_register_styles() {
 	wp_enqueue_style( 'myschool-style', get_stylesheet_uri(), array(), $theme_version );
 	wp_enqueue_style( 'bootstrap', get_template_directory_uri() . '/assets/css/bootstrap.min.css', '', '', 'all' );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/assets/font-awesome/css/font-awesome.min.css', '', '', 'all' );
-	//wp_enqueue_style( 'lightbox', 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css', '', '', 'all' );
 	wp_enqueue_style( 'animate', get_template_directory_uri() . '/assets/css/animate.min.css', '', '', 'all' );
+	wp_enqueue_style( 'myschool-customize', get_template_directory_uri() . '/assets/css/customizer.css' );
+	wp_add_inline_style( 'myschool-customize', myschool_customize_css() );
 
 }
 
@@ -78,7 +82,6 @@ function myschool_register_scripts() {
 	wp_enqueue_script( 'bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array( 'jquery' ), '', true );
 	wp_enqueue_script( 'myschool-js', get_template_directory_uri() . '/assets/js/main.js', array( 'jquery' ), $theme_version, true );
 	wp_enqueue_script( 'wow', get_template_directory_uri() . '/assets/js/wow.js', array( 'jquery' ), '', true );
-	//wp_enqueue_script( 'lightbox', get_template_directory_uri() . 'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js', array( 'jquery' ), '', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'myschool_register_scripts' );
