@@ -114,7 +114,9 @@ if ( ! function_exists( 'myschool_after_loop' ) ) {
 	 */
 	function myschool_after_loop() {
 		echo '</div></div>';
-		echo '<div class="col-sm-4">';
+		echo '<div id="secondary" div class="col-sm-4 col-sm-4">';
+		dynamic_sidebar( 'sidebar-2' );
+		echo '</div>';
 		echo '</div></div></section>';
 	}
 }
