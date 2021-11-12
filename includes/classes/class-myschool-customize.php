@@ -49,7 +49,7 @@ if ( ! class_exists( 'MySchool_Customize' ) ) {
 				)
 			);
 			$wp_customize->add_control(
-				'top_banner_title',
+				'mail',
 				array(
 					'type'    => 'text',
 					'label'   => __( 'Mail', 'myschool' ),

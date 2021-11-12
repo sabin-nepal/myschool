@@ -73,6 +73,23 @@ if ( ! function_exists( 'myschool_post_thumbnail' ) ) {
 	}
 }
 
+if ( ! function_exists( 'myschool_logo' ) ) {
+	/**
+	 * Get Custom logo
+	 *
+	 * @return void
+	 */
+	function myschool_logo() {
+		if ( has_custom_logo() ) {
+			?>
+			<div class="i-h-logo">
+				<img src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>" alt="logo" height="40">
+			</div>
+			<?php
+		}
+	}
+}
+
 if ( ! function_exists( 'myschool_before_loop' ) ) {
 
 	/**
@@ -96,6 +113,8 @@ if ( ! function_exists( 'myschool_after_loop' ) ) {
 	 * @return void
 	 */
 	function myschool_after_loop() {
-		echo '</div></div></div></section>';
+		echo '</div></div>';
+		echo '<div class="col-sm-4">';
+		echo '</div></div></section>';
 	}
 }

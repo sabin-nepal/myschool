@@ -19,26 +19,28 @@
 		<?php wp_head(); ?>
 	</head>
 <body <?php body_class(); ?>>
-
-<div class="nav-wrapper">
+<?php get_template_part( 'template-parts/header/top', 'banner' ); ?>
+<div class="info-header">
 	<div class="container">
-		<nav class="navbar navbar-expand-md custom_nav justify-content-between navbar-dark">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main_nav" aria-controls="main_nav" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>Menu
-			</button> 
-		<div class="collapse navbar-collapse" id="main_nav">
-		<?php
-		if ( has_nav_menu( 'primary' ) ) {
-			wp_nav_menu(
-				array(
-					'theme_location' => 'primary',
-					'container'      => false,
-					'menu_class'     => 'navbar-nav',
-				)
-			);
-		}
-		?>
+		<div class="d-flex align-items-center justify-content-between">
+			<div class="i-h-contact">
+				<div class="i-h-subtitle">
+					<?php echo sanitize_text_field( get_theme_mod( 'mail' ) ); ?>
+				</div>
+				<div class="i-h-title">
+				<?php echo sanitize_text_field( get_theme_mod( 'phone_number' ) ); ?>
+				</div>
+			</div>
+			<?php myschool_logo(); ?>
+			<div class="i-h-opening">
+				<div class="i-h-subtitle">
+					Opening Time:
+				</div>
+				<div class="i-h-title">
+				<?php echo sanitize_text_field( get_theme_mod( 'opening_time' ) ); ?>
+				</div>
+			</div>
 		</div>
-		</nav>
 	</div>
 </div>
+<?php get_template_part( 'template-parts/header/site', 'nav' ); ?>
