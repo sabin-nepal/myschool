@@ -11,6 +11,6 @@
 ?>
 <article  class="no-content">
 	<div class="container">
-		<?php esc_html_e( 'Currently no post availablke..', 'myschool' ); ?>
+		<?php esc_html_e( 'Currently no post available..', 'myschool' ); ?>
 	</div>
 </article>
