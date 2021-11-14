@@ -98,7 +98,7 @@ if ( ! function_exists( 'myschool_before_loop' ) ) {
 	 * @return void
 	 */
 	function myschool_before_loop() {
-		$output  = '<section class="new-line py-5">';
+		$output  = '<section id="blog-page" class="new-line py-5">';
 		$output .= '<div class="container"><div class="row">';
 		$output .= '<div id="primary" class="col-md-8 col-sm-8">';
 		$output .= '<div class="blog-item">';
