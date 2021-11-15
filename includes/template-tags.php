@@ -83,7 +83,9 @@ if ( ! function_exists( 'myschool_logo' ) ) {
 		if ( has_custom_logo() ) {
 			?>
 			<div class="i-h-logo">
-				<img src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>" alt="logo" height="40">
+				<a href=" <?php echo site_url(); ?>">
+					<img src="<?php echo esc_url( wp_get_attachment_url( get_theme_mod( 'custom_logo' ) ) ); ?>" alt="logo" height="40">
+				</a>
 			</div>
 			<?php
 		}

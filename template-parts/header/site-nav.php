@@ -28,6 +28,7 @@
 					'theme_location' => 'primary',
 					'container'      => 'd-flex align-items-center justify-content-between',
 					'menu_class'     => 'float-left nav-links list-unstyled mb-0',
+					'walker'         => new MySchool_Navwalker(),
 				)
 			);
 		}

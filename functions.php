@@ -50,6 +50,9 @@ require get_template_directory() . '/includes/template-tags.php';
 //generate customizer css
 require get_template_directory() . '/includes/colors-pattern.php';
 
+//custom navwalker
+require get_template_directory() . '/includes/classes/class-myschool-navwalker.php';
+
 /**
  * Register and Enqueue Styles.
  *
@@ -119,13 +122,3 @@ function myschool_sidebar_registration() {
 
 }
 add_action( 'widgets_init', 'myschool_sidebar_registration' );
-
-//add class to nav li
-function myschool_menu_classes( $classes, $item, $args ) {
-	$location = 'primary';
-	if ( $location === $args->theme_location ) {
-		$classes[] = 'nav-link-item';
-	}
-	return $classes;
-}
-add_filter( 'nav_menu_css_class', 'myschool_menu_classes', 1, 3 );
