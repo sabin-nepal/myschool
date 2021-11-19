@@ -129,7 +129,7 @@ if ( ! class_exists( 'MySchool_Customize' ) ) {
 			);
 			//Customizer settings and control to edit the colors of this theme
 			$wp_customize->add_setting(
-				'header_footer_color',
+				'footer_color',
 				array(
 					'capability'        => 'edit_theme_options',
 					'default'           => '#35373e',
@@ -140,9 +140,9 @@ if ( ! class_exists( 'MySchool_Customize' ) ) {
 			$wp_customize->add_control(
 				new Wp_Customize_Color_Control(
 					$wp_customize,
-					'header_footer_color',
+					'footer_color',
 					array(
-						'label'   => __( 'Header & Footer Color', 'myschool' ),
+						'label'   => __( 'Footer Color', 'myschool' ),
 						'section' => 'colors',
 					)
 				)

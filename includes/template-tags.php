@@ -100,9 +100,11 @@ if ( ! function_exists( 'myschool_before_loop' ) ) {
 	 * @return void
 	 */
 	function myschool_before_loop() {
+		$sidebar = get_theme_mod( 'enable_sidebar_blog' );
+		$classes = $sidebar ? 'col-md-8 col-sm-8' : 'col-md-12 col-sm-12';
 		$output  = '<section id="blog-page" class="new-line py-5">';
 		$output .= '<div class="container"><div class="row">';
-		$output .= '<div id="primary" class="col-md-8 col-sm-8">';
+		$output .= '<div id="primary" class="' . $classes . '">';
 		$output .= '<div class="blog-item">';
 		echo $output;
 	}
@@ -115,10 +117,13 @@ if ( ! function_exists( 'myschool_after_loop' ) ) {
 	 * @return void
 	 */
 	function myschool_after_loop() {
+		$sidebar = get_theme_mod( 'enable_sidebar_blog' );
 		echo '</div></div>';
-		echo '<div id="secondary" div class="col-sm-4 col-sm-4">';
-		dynamic_sidebar( 'sidebar-2' );
-		echo '</div>';
+		if ( $sidebar ) {
+			echo '<div id="secondary" class="col-sm-4 col-sm-4">';
+			dynamic_sidebar( 'sidebar-2' );
+			echo '</div>';
+		}
 		echo '</div></div></section>';
 	}
 }

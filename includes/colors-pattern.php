@@ -8,9 +8,8 @@
 function myschool_customize_css() {
 
 	ob_start();
-	$header_footer_bgcolor = get_theme_mod( 'header_footer_color', '#35373e' );
+	$header_footer_bgcolor = get_theme_mod( 'footer_color', '#35373e' );
 	?>
-	.header,
 	.footer {
 		background-color: <?php echo $header_footer_bgcolor; ?>
 	}

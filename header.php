@@ -34,7 +34,7 @@
 			<?php myschool_logo(); ?>
 			<div class="i-h-opening">
 				<div class="i-h-subtitle">
-					Opening Time:
+					<?php _e( 'Opening Time:', 'myschool' ); ?>
 				</div>
 				<div class="i-h-title">
 				<?php echo sanitize_text_field( get_theme_mod( 'opening_time' ) ); ?>
