@@ -5,7 +5,8 @@
 **/
 
 function myschool_theme_support() {
-
+	// Make theme available for translation.
+	load_theme_textdomain( 'myschool', get_template_directory() . '/languages' );
 	//Enable support for Post Thumbnails on posts and pages.
 	add_theme_support( 'post-thumbnails' );
 

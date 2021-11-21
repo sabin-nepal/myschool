@@ -1,0 +1,170 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"POT-Creation-Date: 2021-11-21 12:24+0545\n"
+"PO-Revision-Date: 2021-11-21 12:25+0545\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.0\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;esc_html;esc_html__;esc_attr;esc_attr__;"
+"esc_attr_e;esc_html_e\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: 404.php:16
+msgid "Nothing here"
+msgstr ""
+
+#: 404.php:21
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr ""
+
+#: comments.php:13
+msgid "No Comments Yet"
+msgstr ""
+
+#: comments.php:14
+msgid "1 Comment"
+msgstr ""
+
+#: comments.php:15
+msgid "% Comments"
+msgstr ""
+
+#: comments.php:43
+msgid "Comments are closed"
+msgstr ""
+
+#: comments.php:55
+msgid "Leave a Comment"
+msgstr ""
+
+#: comments.php:65 comments.php:67 comments.php:72
+msgid "Name *"
+msgstr ""
+
+#: comments.php:74
+msgid "Email *"
+msgstr ""
+
+#: comments.php:79
+msgid "Subject"
+msgstr ""
+
+#: comments.php:83
+msgid "Message *"
+msgstr ""
+
+#: comments.php:87
+msgid "Add Comment"
+msgstr ""
+
+#: functions.php:36
+msgid "Primary"
+msgstr ""
+
+#: functions.php:37
+msgid "footer"
+msgstr ""
+
+#: functions.php:103
+msgid "Footer 1"
+msgstr ""
+
+#: functions.php:115
+msgid "Blog"
+msgstr ""
+
+#: header.php:34
+msgid "Opening Time:"
+msgstr ""
+
+#: includes/classes/class-myschool-customize.php:16
+msgid "Theme Options"
+msgstr ""
+
+#: includes/classes/class-myschool-customize.php:19
+msgid "Allows you to change diffrent setting related to Myschool"
+msgstr ""
+
+#: includes/classes/class-myschool-customize.php:36
+msgid "Top Banner Title"
+msgstr ""
+
+#: includes/classes/class-myschool-customize.php:55
+msgid "Mail"
+msgstr ""
+
+#: includes/classes/class-myschool-customize.php:74
+msgid "Phone Number"
+msgstr ""
+
+#: includes/classes/class-myschool-customize.php:93
+msgid "Opening Time"
+msgstr ""
+
+#: includes/classes/class-myschool-customize.php:112
+msgid "Sidebar"
+msgstr ""
+
+#: includes/classes/class-myschool-customize.php:114
+msgid "Enable or disable Sidebar in blog and single post"
+msgstr ""
+
+#: includes/classes/class-myschool-customize.php:124
+msgid "Colors"
+msgstr ""
+
+#: includes/classes/class-myschool-customize.php:127
+msgid "Allows you to change Colors related to Myschool"
+msgstr ""
+
+#: includes/classes/class-myschool-customize.php:145
+msgid "Footer Color"
+msgstr ""
+
+#: includes/classes/class-myschool-customize.php:156
+msgid "Social Links"
+msgstr ""
+
+#: includes/classes/class-myschool-customize.php:159
+msgid "Allows you to change Social Links of My School"
+msgstr ""
+
+#: includes/classes/class-myschool-customize.php:176
+msgid "Facebook"
+msgstr ""
+
+#: includes/classes/class-myschool-customize.php:179
+msgid "http://www.facebook.com"
+msgstr ""
+
+#: includes/classes/class-myschool-customize.php:199
+msgid "Twitter"
+msgstr ""
+
+#: includes/classes/class-myschool-customize.php:202
+msgid "http://www.twitter.com"
+msgstr ""
+
+#: includes/template-tags.php:19
+#, php-format
+msgid "By %s"
+msgstr ""
+
+#: includes/template-tags.php:43
+msgid ", "
+msgstr ""
+
+#: template-parts/content-none.php:14
+msgid "Currently no post available.."
+msgstr ""
+
+#: template-parts/content.php:24
+msgid "Continue Reading"
+msgstr ""
